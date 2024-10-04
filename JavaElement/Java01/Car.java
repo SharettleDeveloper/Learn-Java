@@ -29,4 +29,25 @@ public class Car {
     }
 }
 
+class ElectricCar extends Car{
+    int batteryLevel;
 
+    public ElectricCar(String color, int speed, int batteryLevel){
+        super(color, speed);
+        this.batteryLevel = batteryLevel;
+    }
+
+    public void chargeBattery(int charge){
+        batteryLevel += charge;
+        System.out.println("バッテリーを" + charge +"%充電しました。現在のバッテリー残量:" + batteryLevel + "%");
+    }
+
+    @Override
+    public void startEngine(){
+        if (batteryLevel > 0){
+            System.out.println("電気エンジンがスタートしました");
+        }else{
+            System.out.println("バッテリーが不足しています。エンジンをスタートできません");
+        }
+    }
+}

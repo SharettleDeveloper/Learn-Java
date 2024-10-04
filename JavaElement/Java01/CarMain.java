@@ -2,7 +2,7 @@ package JavaElement.Java01;
 
 public class CarMain {
     public static void main(String[] args){
-        Car myCar = new Car("赤" , 300);
+        ElectricCar myCar = new ElectricCar("赤" , 300 ,10);
         myCar.startEngine();
         myCar.accelerate(100);
         myCar.displayInfo();
